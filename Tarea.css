@@ -1,0 +1,59 @@
+body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: #f2f2f2;
+    }
+
+    form {
+      margin-bottom: 20px;
+    }
+
+    input, select, button {
+      margin: 5px;
+      padding: 8px;
+    }
+
+    .filtros {
+      margin: 20px 0;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      margin: 10px 0;
+      padding: 10px;
+      border-radius: 5px;
+      background-color: white;
+      box-shadow: 0 0 5px #ccc;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .alta {
+      border-left: 10px solid red;
+    }
+
+    .media {
+      border-left: 10px solid orange;
+    }
+
+    .baja {
+      border-left: 10px solid green;
+    }
+
+    .tarea-detalle {
+      flex: 1;
+    }
+
+    button.estado-btn {
+      margin-right: 10px;
+    }
+
+    .completada {
+      text-decoration: line-through;
+      opacity: 0.6;
+    }
