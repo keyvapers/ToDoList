@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Lista de Tareas</title>
+  <link rel="stylesheet" href="Tarea.css">
+</head>
+<body>
+  <h1>Lista de Tareas Colaborativa</h1>
+
+  <!-- Formulario clásico con atributos antiguos -->
+  <form id="formTarea" onsubmit="agregarTarea(event)">
+    <input type="text" id="titulo" placeholder="Título de la tarea" required>
+    <input type="text" id="descripcion" placeholder="Descripción" required>
+    <select id="prioridad" required>
+      <option value="">Selecciona prioridad</option>
+      <option value="Alta">Alta</option>
+      <option value="Media">Media</option>
+      <option value="Baja">Baja</option>
+    </select>
+    <input type="submit" value="Agregar Tarea">
+  </form>
+
+  <!-- Filtros -->
+  <div class="filtros">
+    <label>Filtrar por prioridad:
+      <select id="filtroPrioridad" onchange="mostrarTareas()">
+        <option value="Todas">Todas</option>
+        <option value="Alta">Alta</option>
+        <option value="Media">Media</option>
+        <option value="Baja">Baja</option>
+      </select>
+    </label>
+
+    <label>Ordenar por:
+      <select id="ordenarPor" onchange="mostrarTareas()">
+        <option value="estado">Estado</option>
+        <option value="prioridad">Prioridad</option>
+      </select>
+    </label>
+  </div>
+
+  <!-- Lista de tareas -->
+  <ul id="listaTareas"></ul>
+
+  <!-- Contador -->
+  <div id="contadores">
+    ✅ Completadas: <span id="completadas">0</span> |
+    🕒 Pendientes: <span id="pendientes">0</span>
+  </div>
+
+  <script src="Tarea.js"></script>
+</body>
+</html>
